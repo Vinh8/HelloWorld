@@ -1,18 +1,22 @@
-﻿namespace HelloWorld
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-            string stg = "Hello World";
-            Console.WriteLine(stg);
-            Console.WriteLine("Enter Username");
-            string userName = Console.ReadLine();
-            Console.WriteLine("Enter user's age");
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Username is "+ userName +" " + "Age is " + age);
+namespace Lab_6_1
+{
+    static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
         }
     }
 }
